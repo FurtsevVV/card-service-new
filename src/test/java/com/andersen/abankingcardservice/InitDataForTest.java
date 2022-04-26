@@ -2,6 +2,7 @@ package com.andersen.abankingcardservice;
 
 import com.andersen.abankingcardservice.dto.CardIdAccountDto;
 import com.andersen.abankingcardservice.dto.UserCardDto;
+import com.andersen.abankingcardservice.dto.request.CreateNewCardDto;
 import com.andersen.abankingcardservice.entity.*;
 
 import java.math.BigDecimal;
@@ -74,6 +75,16 @@ public class InitDataForTest {
                 .userId(1L)
                 .cardNumber("4500 0000 0000 0000")
                 .validationPeriodDate(LocalDateTime.parse("2022-04-15T12:16:03.000000"))
+                .build();
+    }
+
+    public static CreateNewCardDto getCreateNewCardDto1(){
+        return CreateNewCardDto.builder()
+                .userId(1L)
+                .accountId(1L)
+                .cardType(CardType.DEBIT_CARD)
+                .currency(Currency.RUSSIAN_RUBLE)
+                .paymantSystem(PaymantSystem.VISA)
                 .build();
     }
 

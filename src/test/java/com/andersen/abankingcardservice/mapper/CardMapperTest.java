@@ -9,7 +9,7 @@ import org.mapstruct.factory.Mappers;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class CardMapperTest {
+class CardMapperTest {
 
     private final UserCardMapper cardMapper = Mappers.getMapper(UserCardMapper.class);
 

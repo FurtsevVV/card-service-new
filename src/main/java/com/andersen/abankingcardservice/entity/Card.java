@@ -17,7 +17,8 @@ public class Card {
 
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "card_generator")
+    @SequenceGenerator(allocationSize = 1, name = "card_generator")
     private Long cardId;
 
     private Long userId;
